@@ -1,159 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-   <meta charset="UTF-8" />
-        <title>Eva Clement</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Proyecto artístico sobre las aves invernantes de l’Albufera que combina ilustración, fotografía y diseño editorial desde una mirada personal y visual." />
-        <meta name="keywords" content="Albufera, Valencia, Aves invernantes, DANA, ilustración, fotografía" />
-        <meta name="author" content="Eva Clement Sax" />
-        <link rel="icon" type="image/img" href="img/icon.png" />
-        <link rel="apple-touch-icon" href="img/icon.png" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="scroll.css">
-        <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jaro:opsz@6..72&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <title>Eva Clement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Proyecto artístico sobre las aves invernantes de l’Albufera que combina ilustración, fotografía y diseño editorial desde una mirada personal y visual."
+    />
+    <meta
+      name="keywords"
+      content="Albufera, Valencia, Aves invernantes, DANA, ilustración, fotografía"
+    />
+    <meta name="author" content="Eva Clement Sax" />
+    <link rel="icon" type="image/img" href="img/icon.png" />
+    <link rel="apple-touch-icon" href="img/icon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/scroll.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/glb.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jaro:opsz@6..72&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="cursor-custom" id="cursor"></div>
     <header>
-            <a href="about:blank" target="_blank" class="logo">Eva Clement</a>
-            <nav class="header-nav">
-                <ul class="nav-links">
-                    <li><a href="about:blank" target="_blank">Inicio</a></li>
-                    <li><a href="about:blank" target="_blank">Contacto</a></li>
-                </ul>
-                <div class="hamburguesa">
-                    <span class="material-symbols-outlined">menu</span>
-                </div>
-            </nav>
-        </header>
-         <section class="hero-container">
-        <div class="hero-content">
-            <h1>A really compelling headline</h1>
-            <p>Call out a feature, benefit, or value of your site, then link to a page where people can learn more about it.</p>
-            <a href="#" class="cta-button">Call to action</a>
+      <a href="about:blank" target="_blank" class="logo">Eva Clement</a>
+      <nav class="header-nav">
+        <ul class="nav-links">
+          <li><a href="about:blank" target="_blank">Inicio</a></li>
+          <li><a href="about:blank" target="_blank">Contacto</a></li>
+        </ul>
+        <div class="hamburguesa">
+          <span class="material-symbols-outlined">menu</span>
         </div>
-        <div class="hero-image">
-            <img src="img/filtro6.jpg" alt="3D Model Representation">
-        </div>
-        </section>
-
-    
+      </nav>
+    </header>
+    <section class="hero-container">
+      <div class="hero-content">
+        <h1>A really compelling headline</h1>
+        <p>
+          Call out a feature, benefit, or value of your site, then link to a
+          page where people can learn more about it.
+        </p>
+        <a href="#" class="cta-button">Call to action</a>
+      </div>
+      <div class="hero-image">
+        <img src="img/filtro6.jpg" alt="3D Model Representation" />
+      </div>
+    </section>
 
     <div class="contenedor-degradado">
-        <div class="contenedor-columnas">
-        
+      <div class="contenedor-columnas">
         <div class="fila">
-            <div class="columna-p">
-                <p>Este es el primer párrafo. Está alineado a la izquierda. Es ideal para introducir una idea o una característica de tu proyecto.</p>
+          <div class="columna-p" id="columna1">
+            <div class="reveal-wrapper">
+              <p class="reveal-text">
+              Me encanta esa sensación de ver cómo un diseño de Figma se
+              convierte en una web real que funciona perfecto. No solo tiro
+              líneas de código; me aseguro de que el HTML y el CSS estén tan
+              limpios por dentro como se ven por fuera. Para mí, que una web sea
+              responsive no es un extra, es el estándar: si no se ve bien en el
+              móvil mientras tomas un café, no está terminada.
+            </p>
             </div>
+          </div>
         </div>
 
         <div class="fila">
-            <div class="columna-p">
-                <p>Este es el segundo párrafo. Gracias al selector CSS, se mueve automáticamente a la derecha sin que tengas que añadir clases extra.</p>
+          <div class="columna-p" id="columna2">
+            <div class="reveal-wrapper">
+              <p class="reveal-text">
+              No me conformo con webs estáticas. Me gusta usar JavaScript para
+              que el usuario sienta que la página responde a lo que hace. Ya sea
+              un menú que aparece suavemente o una validación que te ayuda a no
+              equivocarte, mi meta es que la interactividad sume y no estorbe.
+              Disfruto buscando soluciones lógicas a problemas que parecen un
+              puzle.
+            </p>
+
             </div>
+            
+          </div>
         </div>
 
         <div class="fila">
-            <div class="columna-p">
-                <p>Tercer párrafo, volvemos a la izquierda. Este ritmo visual ayuda a que el usuario no se canse de leer bloques de texto planos.</p>
+          <div class="columna-p" id="columna3">
+            <div class="reveal-wrapper">
+              <p class="reveal-text">
+              Siempre que diseño algo, me pregunto: "¿Esto se entiende a la
+              primera?". Me obsesiona un poco la usabilidad. Creo que el mejor
+              diseño es el que no necesita explicación. Intento que cada espacio
+              y cada botón guíen al usuario de forma natural, porque al final
+              del día, una web bonita que nadie sabe usar no sirve de mucho.
+            </p>
+
             </div>
+            
+          </div>
         </div>
 
         <div class="fila">
-            <div class="columna-p">
-                <p>Y el cuarto párrafo cierra el ciclo a la derecha. Puedes añadir tantos como quieras y el patrón se mantendrá solo.</p>
-            </div>
-        </div>
+          <div class="columna-p" id="columna4">
+            <div class="reveal-wrapper">
+              <p class="reveal-text">
+              Sé lo que es que un proyecto se complique si no hay orden, por eso
+              me llevo muy bien con Git y GitHub. Me gusta trabajar de forma
+              organizada para que mis compañeras (y mi "yo" del futuro)
+              entiendan qué he hecho. Creo que la comunicación es tan importante
+              como el código, y siempre estoy lista para aprender algo nuevo o
+              echar una mano en lo que haga falta.
+            </p>
 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="contenedorBarra">
+          <div class="barra" id="barra"></div>
+        </div>
+      </div>
+      <section class="contenedor-glb">
+        <div class="objetoGlb">
+        <model-viewer src="Astronaut.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-360.3deg 91.39deg 4.288m" field-of-view="30deg" auto-rotate>
+    <button class="Hotspot" slot="hotspot-1" data-position="0.004943376496202634m 1.7435551795506283m 0.3499383491535166m" data-normal="0.2586151003950921m -0.19952579310771987m 0.9451495583939994m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">item 1</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="0.5268783248943438m 0.915153755047833m 0.11169006269187065m" data-normal="0.7503211590804437m -0.023259230378881505m 0.6606641858299583m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">item 2</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.002522889103573789m 1.703820370880117m -0.34841200709342957m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">item 3</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
     </div>
-        <div class="container">
-      <div class="contenedorBarra">
-        <div class="barra" id="barra"></div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
       </div>
     </div>
 
-    </div>    
+        
+      </section>
+
+      
+
+
     <footer>
-        <div class="footer-top">
-            <h2>Let's work together</h2>
-            <div class="social-icons-top">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-                <a href="#"><i class="far fa-envelope"></i></a>
-            </div>
+      <div class="footer-top">
+        <h2>Let's work together</h2>
+        <div class="social-icons-top">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="far fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="footer-bottom">
+        <div class="brand-info">
+          <h3>Namedly</h3>
+          <p>Descriptive line about what your company does.</p>
+          <div class="social-icons-bottom">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
         </div>
 
-        <hr>
-
-        <div class="footer-bottom">
-            <div class="brand-info">
-                <h3>Namedly</h3>
-                <p>Descriptive line about what your company does.</p>
-                <div class="social-icons-bottom">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-column">
-                <h4>Features</h4>
-                <ul>
-                    <li><a href="#">Core features</a></li>
-                    <li><a href="#">Pro experience</a></li>
-                    <li><a href="#">Integrations</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Learn more</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Case studies</a></li>
-                    <li><a href="#">Customer stories</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
+        <div class="footer-column">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="#">Core features</a></li>
+            <li><a href="#">Pro experience</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
         </div>
+
+        <div class="footer-column">
+          <h4>Learn more</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Case studies</a></li>
+            <li><a href="#">Customer stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
-   
-
-
-
-
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/reveal.js"></script>
     <script>
-            const hamburger = document.querySelector(".hamburguesa");
-            const navLinks = document.querySelector(".nav-links");
+      const hamburger = document.querySelector(".hamburguesa");
+      const navLinks = document.querySelector(".nav-links");
 
-            hamburger.addEventListener("click", () => {
-                navLinks.classList.toggle("active");
-            });
-        </script>
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+       window.addEventListener("scroll", efectoParallax)
+
+
+function efectoParallax() {
+    // Es mejor usar querySelector para evitar errores si el ID falla
+    const c1 = document.getElementById("columna1");
+    const c2 = document.getElementById("columna2");
+    const c3 = document.getElementById("columna3");
+    const c4 = document.getElementById("columna4");
     
-</body>
+    let posicion = window.scrollY;
+
+    // Solo ejecutamos si los elementos existen para no romper el server
+    if (c1 && c2 && c3 && c4) {
+        c1.style.transform = `translateY(${posicion * 0.1}px)`;
+        c2.style.transform = `translateY(${posicion * 0.15}px)`;
+        c3.style.transform = `translateY(${posicion * 0.2}px)`;
+        c4.style.transform = `translateY(${posicion * 0.25}px)`;
+    }
+}
+
+      
+    </script>
+  </body>
+</html>
