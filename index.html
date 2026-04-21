@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Proyecto artístico sobre las aves invernantes de l’Albufera que combina ilustración, fotografía y diseño editorial desde una mirada personal y visual."
+      content="Portafolio de Eva Clement, diseñadora web especializada en desarrollo frontend."
     />
     <meta
       name="keywords"
-      content="Albufera, Valencia, Aves invernantes, DANA, ilustración, fotografía"
+      content="Eva Clement, diseño web, porfolio, front-end"
     />
     <meta name="author" content="Eva Clement Sax" />
     <link rel="icon" type="image/img" href="img/icon.png" />
@@ -63,11 +63,31 @@
     </section>
 
     <div class="contenedor-degradado">
+      <svg id="zigzag-canvas" viewBox="0 0 1000 2000" preserveAspectRatio="none">
+    <defs>
+      <path id="zigzag-path" d="M 100,0 
+          L 100,400 
+          Q 100,500 500,500 
+          Q 900,500 900,600 
+          L 900,1000 
+          Q 900,1100 500,1100 
+          Q 100,1100 100,1200 
+          L 100,1600 
+          Q 100,1700 500,1700 
+          Q 900,1700 900,1800 
+          L 900,2000
+          " />
+    </defs>
+    <use href="#zigzag-path" class="line line-1" />
+    <use href="#zigzag-path" class="line line-2" />
+    <use href="#zigzag-path" class="line line-3" />
+  </svg>
+
       <div class="contenedor-columnas">
         <div class="fila">
           <div class="columna-p" id="columna1">
             <div class="reveal-wrapper">
-              <p class="reveal-text">
+              <p class="reveal-text" id="p">
               Me encanta esa sensación de ver cómo un diseño de Figma se
               convierte en una web real que funciona perfecto. No solo tiro
               líneas de código; me aseguro de que el HTML y el CSS estén tan
@@ -82,7 +102,7 @@
         <div class="fila">
           <div class="columna-p" id="columna2">
             <div class="reveal-wrapper">
-              <p class="reveal-text">
+              <p class="reveal-text" id="p">
               No me conformo con webs estáticas. Me gusta usar JavaScript para
               que el usuario sienta que la página responde a lo que hace. Ya sea
               un menú que aparece suavemente o una validación que te ayuda a no
@@ -99,7 +119,7 @@
         <div class="fila">
           <div class="columna-p" id="columna3">
             <div class="reveal-wrapper">
-              <p class="reveal-text">
+              <p class="reveal-text" id="p">
               Siempre que diseño algo, me pregunto: "¿Esto se entiende a la
               primera?". Me obsesiona un poco la usabilidad. Creo que el mejor
               diseño es el que no necesita explicación. Intento que cada espacio
@@ -115,7 +135,7 @@
         <div class="fila">
           <div class="columna-p" id="columna4">
             <div class="reveal-wrapper">
-              <p class="reveal-text">
+              <p class="reveal-text" id="p">
               Sé lo que es que un proyecto se complique si no hay orden, por eso
               me llevo muy bien con Git y GitHub. Me gusta trabajar de forma
               organizada para que mis compañeras (y mi "yo" del futuro)
@@ -129,11 +149,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="contenedorBarra">
-          <div class="barra" id="barra"></div>
-        </div>
-      </div>
+      
       <section class="contenedor-glb">
         <div class="objetoGlb">
         <model-viewer src="Astronaut.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-360.3deg 91.39deg 4.288m" field-of-view="30deg" auto-rotate>
@@ -155,10 +171,10 @@
     </div>
 </model-viewer>
       </div>
-    </div>
 
         
       </section>
+    </div>
 
       
 

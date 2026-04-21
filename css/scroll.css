@@ -1,24 +1,77 @@
+body {
+  margin: 0;
+  background-color: #fcfcfc;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
-.container {
-        width: 100%;
-        height: 4000px;
-      }
+.scroll-spacer {
+  height: 500vh; /* Altura de la página para el scroll */
+}
 
-    .contenedorBarra {
-        position: fixed;
-        top: 1000px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: 10; 
-        
-        width: 30px;
-        height: 100vh;
-    }
 
-    .barra {
-      width: 100%;
-      height: 0%;
-      background-color: rgb(5, 5, 5);
-      transition: height 0.1s ease-out;
-    }
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 15; /* Grosor de cada barra */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 150 2000;
+}
+
+
+
+/* Colores o estilos diferentes para cada barra si quieres */
+
+.content-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.contenedor-degradado {
+  position: relative; /* Necesario para que el SVG se pegue aquí */
+  width: 100%;
+  overflow: hidden;
+}
+
+#zigzag-canvas {
+  position: absolute; /* Cambiamos de fixed a absolute para que se quede en este div */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cubre todo el alto del contenedor de texto */
+  z-index: 0; /* Va por detrás */
+  pointer-events: none; /* Para que puedas seguir seleccionando el texto */
+}
+
+.contenedor-columnas {
+  position: relative;
+  z-index: 1; /* El texto va por encima de las líneas */
+}
+
+.line {
+  fill: none;
+  stroke: black; /* O un color que contraste con tu degradado */
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 200 2500; /* Ajusta el 200 para hacer la barra más larga */
+  opacity: 0.2; /* Sugerencia: bajale la opacidad para que no distraiga del texto */
+}
+
+/* El gap de 5px (15 de ancho + 5 de gap = 20px de desplazamiento) */
+.line-1 {
+  transform: translateX(-20px);
+}
+.line-2 {
+  transform: translateX(0px);
+}
+.line-3 {
+  transform: translateX(20px);
+}

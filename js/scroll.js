@@ -1,21 +1,39 @@
- let barra = document.getElementById("barra");
-      
-      window.addEventListener("scroll", crecerBarraScroll);
-      
-      function crecerBarraScroll() {
-          const scrollTop = document.documentElement.scrollTop; // Propiedad que nos devuelve cuántos píxeles has desplazado (scroll) hacia abajo en la página
-          const scrollHeight = document.documentElement.scrollHeight; // Altura total de la página (visible + parte que requiere scroll)
-          const clientHeight = document.documentElement.clientHeight; // Altura visible de la ventana del navegador, es decir, el área del contenido que el usuario puede ver sin hacer scroll.
+window.addEventListener("scroll", () => {
+  const lines = document.querySelectorAll(".line");
 
-          const maxScroll = scrollHeight - clientHeight; // El máximo valor que puede tener el scroll vertical. Por partes igual es más fácil de entender: 1) scrollHeight → altura total de la página (incluyendo lo que no se ve sin hacer scroll). 2) clientHeight → altura visible de la ventana del navegador. 3) Ahora lo restamos... Cuando hacemos scroll, scrollTop mide cuánto hemos bajado desde arriba. Pero no podemos seguir bajando más allá del contenido visible, porque la parte visible ocupa clientHeight. Por eso, la diferencia (scrollHeight - clientHeight) es el desplazamiento máximo posible.
-          
-          const porcentaje = (scrollTop / maxScroll) * 100; /* Calcula qué porcentaje de la página has recorrido haciendo scroll. Ejemplo práctico: porcentaje = (1100 / 2200) * 100 
-          porcentaje = 0.5 * 100 
-          porcentaje = 50
-          
-          Es decir, hemos bajado un 50% de la página haciendo scroll
-          */
+  // Calculamos cuánto ha bajado el usuario (0 a 1)
+  const scrollPercent =
+    window.scrollY / (document.body.offsetHeight - window.innerHeight);
 
-          // Modificamos el HEIGHT de la barra por el nuevo valor 
-          barra.style.height = porcentaje + "%";
-}
+  lines.forEach((line, index) => {
+    // Obtenemos el largo total del camino de zig-zag
+    const pathLength = document.getElementById("zigzag-path").getTotalLength();
+
+    // El "offset" mueve la barra a lo largo del camino.
+    // Multiplicamos por pathLength para que recorra todo el trayecto.
+    // El (index * 60) añade una separación constante entre las 3 barras.
+
+    const move = pathLength - scrollPercent * pathLength;
+
+    line.style.strokeDashoffset = move;
+  });
+});
+window.addEventListener("scroll", () => {
+  const contenedor = document.querySelector(".contenedor-degradado");
+  const lines = document.querySelectorAll(".line");
+  const path = document.getElementById("zigzag-path");
+  const pathLength = path.getTotalLength();
+
+  // Calculamos el progreso basado en cuándo el contenedor entra en pantalla
+  const rect = contenedor.getBoundingClientRect();
+  const viewHeight = window.innerHeight;
+
+  // Progreso de 0 a 1 dentro del div
+  let progress = (viewHeight - rect.top) / (rect.height + viewHeight);
+  progress = Math.max(0, Math.min(1, progress)); // Limitamos entre 0 y 1
+
+  lines.forEach((line) => {
+    // Movemos las barras sincronizadas
+    line.style.strokeDashoffset = pathLength - progress * pathLength;
+  });
+});

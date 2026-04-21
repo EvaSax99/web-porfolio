@@ -9,6 +9,7 @@ body {
   color: black;
   background: #ffffff;
   cursor: none;
+  overflow-x: hidden;
 }
 
 header {
@@ -177,7 +178,7 @@ header {
 }
 
 .contenedor-degradado {
-  height: 3000vh;
+  min-height: 2000vh;
 
   background: linear-gradient(
     to bottom,
@@ -187,20 +188,15 @@ header {
     #000000 100%
   );
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   color: #888;
-  font-family: sans-serif;
   padding: 20px 0;
-  
 }
 .contenedor-columnas {
   max-width: 98vw;
   margin: 0 auto;
   padding: 0 20px;
-  margin-top: 1000vh;
+  margin-top: 100vh;
 }
 /* 
 .reveal-wrapper {
@@ -220,10 +216,10 @@ header {
 } */
 
 .columna-p {
-    padding: 30px;
-    /* border-radius: 8px;
+  padding: 30px;
+  /* border-radius: 8px;
     box-shadow: 0 0px 40px rgba(164, 245, 141, 0.634); */
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .fila {
   display: flex;
@@ -248,8 +244,12 @@ header {
   font-weight: 500;
   line-height: 1.5;
   display: inline-block;
-  will-change: transform; 
-    transition: transform 0.1s ease-out; 
+  will-change: transform;
+  transition:
+    color 0.8s ease,
+    opacity 0.8s ease;
+
+  opacity: 0.3;
 }
 
 .columna-p:hover {
@@ -292,6 +292,7 @@ header {
   margin: 0 auto;
   padding: 20px 0;
   background-color: #f1761e;
+  margin-bottom: 100px;
 }
 
 a {
