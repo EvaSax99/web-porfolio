@@ -1,77 +1,31 @@
-body {
-  margin: 0;
-  background-color: #fcfcfc;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-.scroll-spacer {
-  height: 500vh; /* Altura de la página para el scroll */
-}
-
-
-
-.line {
-  fill: none;
-  stroke: black;
-  stroke-width: 15; /* Grosor de cada barra */
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 150 2000;
-}
-
-
-
-/* Colores o estilos diferentes para cada barra si quieres */
-
-.content-overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
 .contenedor-degradado {
-  position: relative; /* Necesario para que el SVG se pegue aquí */
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 4000px; /* O el alto que necesites */
 }
 
-#zigzag-canvas {
-  position: absolute; /* Cambiamos de fixed a absolute para que se quede en este div */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Cubre todo el alto del contenedor de texto */
-  z-index: 0; /* Va por detrás */
-  pointer-events: none; /* Para que puedas seguir seleccionando el texto */
+.squiggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding: 0 20px;
+    z-index: 0;
+    pointer-events: none; 
+    display: block;
+    transition: height 0.1s ease-out;
 }
 
-.contenedor-columnas {
-  position: relative;
-  z-index: 1; /* El texto va por encima de las líneas */
-}
 
-.line {
-  fill: none;
-  stroke: black; /* O un color que contraste con tu degradado */
-  stroke-width: 15;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 200 2500; /* Ajusta el 200 para hacer la barra más larga */
-  opacity: 0.2; /* Sugerencia: bajale la opacidad para que no distraiga del texto */
+#camino1 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dashoffset 0.1s linear; 
 }
-
-/* El gap de 5px (15 de ancho + 5 de gap = 20px de desplazamiento) */
-.line-1 {
-  transform: translateX(-20px);
-}
-.line-2 {
-  transform: translateX(0px);
-}
-.line-3 {
-  transform: translateX(20px);
+#camino2 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dashoffset 0.1s linear; 
 }

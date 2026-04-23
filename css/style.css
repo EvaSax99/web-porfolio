@@ -178,7 +178,8 @@ header {
 }
 
 .contenedor-degradado {
-  min-height: 2000vh;
+  /* min-height: 2000vh; */
+  height: auto;
 
   background: linear-gradient(
     to bottom,
@@ -197,9 +198,14 @@ header {
   margin: 0 auto;
   padding: 0 20px;
   margin-top: 100vh;
+  
+  position: relative;
+  z-index: 1; 
 }
+
+
 /* 
-.reveal-wrapper {
+ .reveal-wrapper {
     overflow: hidden; 
     vertical-align: bottom;
 }
@@ -213,14 +219,10 @@ header {
 .reveal-text.active {
     transform: translateY(0%);
     opacity: 1;
-} */
+}   */
 
-.columna-p {
-  padding: 30px;
-  /* border-radius: 8px;
-    box-shadow: 0 0px 40px rgba(164, 245, 141, 0.634); */
-  margin-bottom: 40px;
-}
+
+
 .fila {
   display: flex;
   justify-content: flex-start;
@@ -230,7 +232,7 @@ header {
   box-sizing: border-box;
 }
 
-.fila:nth-child(even) {
+.fila:nth-of-type(even) {
   justify-content: flex-end;
 }
 
@@ -238,22 +240,17 @@ header {
   width: 35%;
 
   font-size: 20px;
-  color: #fff;
+  color: #000000;
   transition: color 0.3s ease;
   font-family: "Inconsolata";
   font-weight: 500;
   line-height: 1.5;
-  display: inline-block;
-  will-change: transform;
-  transition:
-    color 0.8s ease,
-    opacity 0.8s ease;
-
-  opacity: 0.3;
+  /* display: inline-block; */
+  z-index:100;
 }
 
 .columna-p:hover {
-  font-style: italic;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -266,12 +263,6 @@ header {
   }
 }
 
-.columna-p {
-  position: relative; /* ¡Esto es lo que falta! */
-  transition: bottom 0.1s ease-out;
-  display: block;
-  will-change: transform; /* Opcional: hace que el movimiento no sea brusco */
-}
 
 .cursor-custom {
   width: 25px;
@@ -292,7 +283,8 @@ header {
   margin: 0 auto;
   padding: 20px 0;
   background-color: #f1761e;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+  margin-top: 6000px;
 }
 
 a {
@@ -384,7 +376,7 @@ hr {
 }
 
 .footer-column ul li a:hover {
-  color: #000;
+  color: #fff;
 }
 
 @media (max-width: 768px) {

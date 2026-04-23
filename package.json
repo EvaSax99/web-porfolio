@@ -1,0 +1,12 @@
+{
+  "name": "web-portfolio",
+  "version": "1.0.0",
+  "description": "Personal web portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000"
+  },
+  "keywords": ["portfolio", "web"],
+  "author": "",
+  "license": "ISC"
+}

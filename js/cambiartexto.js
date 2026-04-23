@@ -1,5 +1,5 @@
  document.addEventListener("DOMContentLoaded", () => {
-                const párrafos = document.getElementById("p");
+                const párrafos = document.querySelectorAll("#p");
 
                 const opciones = {
                     root: null, // usa el viewport
