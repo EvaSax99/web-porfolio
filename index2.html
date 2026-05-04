@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adcker Replica</title>
+    <link rel="stylesheet" href="Astronaut.glb">
+    <link rel="stylesheet" href="glb.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #0d0d0d; /* Fondo oscuro como en el video */
+        --text: #ffffff;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: "Syne", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        cursor: crosshair; /* Cursor temporal mientras no carga el JS */
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        position: fixed;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 100;
+      }
+
+      .logo {
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
+      .nav-links span {
+        margin-left: 20px;
+        font-family: "Inter";
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5%;
+      }
+
+      .hero-title h1 {
+        font-size: 10vw; /* Tamaño masivo */
+        line-height: 0.8;
+        margin: 0;
+        text-transform: uppercase;
+        overflow: hidden; /* Importante para el efecto reveal */
+      }
+
+      .hero-row {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      /* El círculo con el video/imagen */
+      .circle-media {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        background: #333;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      .circle-media img,
+      .circle-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Servicios */
+      .services {
+        padding: 100px 5%;
+      }
+      .service-item {
+        border-top: 1px solid #333;
+        padding: 30px 0;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+      .service-item:hover {
+        opacity: 0.5;
+      }
+      .service-item h2 {
+        font-size: 6vw;
+        margin: 0;
+      }
+
+      /* Cursor Personalizado */
+      #custom-cursor {
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 999;
+        mix-blend-mode: difference;
+      }
+
+      .model-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: transparent;
+      }
+
+      model-viewer {
+        width: 40vw; /* Tamaño inicial pequeño */
+        height: 40vw;
+        transition: transform 0.1s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="custom-cursor"></div>
+
+    <nav class="navbar">
+      <div class="logo">adkr.</div>
+      <div class="nav-links">
+        <span>Our Work</span>
+        <span>About</span>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1 class="reveal">THE ART</h1>
+      <div class="hero-row">
+        <div class="circle-media">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400"
+            alt=""
+          />
+        </div>
+        <h1 class="reveal">OF</h1>
+      </div>
+      <h1 class="reveal">HACKING</h1>
+    </section>
+    <section class="spacer"></section>
+    <div class="contenedor-glb">
+        <div class="objetoGlb">
+          <model-viewer
+            src="Astronaut.glb"
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.webp"
+            shadow-intensity="1"
+            camera-orbit="-360.3deg 91.39deg 4.288m"
+            field-of-view="30deg"
+            auto-rotate
+          >
+            <button
+              class="Hotspot"
+              slot="hotspot-1"
+              data-position="0.004943376496202634m 1.7435551795506283m 0.3499383491535166m"
+              data-normal="0.2586151003950921m -0.19952579310771987m 0.9451495583939994m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation">item 1</div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-2"
+              data-position="0.5268783248943438m 0.915153755047833m 0.11169006269187065m"
+              data-normal="0.7503211590804437m -0.023259230378881505m 0.6606641858299583m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation">item 2</div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-3"
+              data-position="0.002522889103573789m 1.703820370880117m -0.34841200709342957m"
+              data-normal="0m 0m -1m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation">item 3</div>
+            </button>
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">View in your space</button>
+            <div id="ar-prompt">
+              <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+            </div>
+          </model-viewer>
+        </div>
+      </div>
+
+    <section class="spacer" style="height: 100vh"></section>
+
+    <section class="services">
+      <div class="service-item"><h2>BEAUTY</h2></div>
+      <div class="service-item"><h2>FASHION</h2></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="glb.js"></script>
+
+
+    <script>
+      // 1. Lógica del Cursor
+      const cursor = document.querySelector("#custom-cursor");
+      document.addEventListener("mousemove", (e) => {
+        gsap.to(cursor, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      });
+
+      // 2. Animación de entrada (Text Reveal)
+      gsap.from(".reveal", {
+        y: 150,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.3,
+        ease: "power4.out",
+        delay: 0.5,
+      });
+
+      // 3. Animación del círculo
+      gsap.from(".circle-media", {
+        scale: 0,
+        rotate: 45,
+        duration: 2,
+        ease: "elastic.out(1, 0.5)",
+        delay: 1,
+      });
+
+      // Registramos el plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      const model = document.querySelector("#miModelo");
+
+      gsap.to(model, {
+        // Escala máxima cuando esté en el centro
+        scale: 2.5,
+        rotateZ: 10, // Un toque de rotación para más dinamismo
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".model-container",
+          start: "top bottom", // Empieza cuando el contenedor asoma por abajo
+          end: "bottom top", // Termina cuando el contenedor se va por arriba
+          scrub: 1, // Suavizado del movimiento (1 segundo de retraso)
+          onUpdate: (self) => {
+            // Lógica de "Hacerse pequeño al final"
+            // self.progress va de 0 a 1.
+            // Queremos que en 0.5 sea el máximo y en 1 vuelva a ser pequeño.
+            let prog = self.progress;
+            let scaleValue;
+
+            if (prog <= 0.5) {
+              // De 0 a 0.5: crece
+              scaleValue = 1 + prog * 3;
+            } else {
+              // De 0.5 a 1: decrece
+              scaleValue = 2.5 - (prog - 0.5) * 3;
+            }
+
+            gsap.to(model, { scale: scaleValue, duration: 0.1 });
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

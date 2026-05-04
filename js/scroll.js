@@ -1,78 +1,80 @@
 
-// const path1 = document.querySelector('#camino1');
+//  const path1 = document.querySelector('#camino1');
 // const path2 = document.querySelector('#camino2');
 // const svg = document.querySelector('.squiggle');
+// const contenedor = document.querySelector('.contenedor-degradado'); // Importante
 
-// // 2. Calculamos la longitud total del trazo
-// const pathLength = path1.getTotalLength();
+// const pathLength1 = path1.getTotalLength();
+// const pathLength2 = path2.getTotalLength();
 
-// // 3. Preparamos el "truco" de los guiones
-// // Hacemos que el guion sea tan largo como toda la línea
-// path1.style.strokeDasharray = `${pathLength} ${pathLength}`;
-// path2.style.strokeDasharray = `${pathLength} ${pathLength}`;
+// path1.style.strokeDasharray = `${pathLength1} ${pathLength1}`;
+// path2.style.strokeDasharray = `${pathLength2} ${pathLength2}`;
 
-// // Inicialmente, desplazamos el guion por completo (línea invisible)
-// path1.style.strokeDashoffset = pathLength;
-// path2.style.strokeDashoffset = pathLength;
+// path1.style.strokeDashoffset = pathLength1;
+// path2.style.strokeDashoffset = pathLength2;
 
-// // 4. Función que se ejecuta al hacer scroll
 // function scrollAnimation() {
-//     // Calculamos cuánto ha bajado el usuario en píxeles
-//     const distance = window.scrollY;
-    
-//     // Calculamos la distancia total que se puede scrollear dentro del SVG
-//     const totalDistance = svg.clientHeight - window.innerHeight;
-    
-//     // Obtenemos un porcentaje entre 0 y 1
-//     let percentage = distance / totalDistance;
-    
-//     // Limitamos el porcentaje para que no se pase de 0 o 1
-//     percentage = Math.max(0, Math.min(1, percentage));
+  
+//     const rect = contenedor.getBoundingClientRect();
+//     const windowHeight = window.innerHeight;
 
-//     // 5. Ajustamos el offset: 
-//     // Si es 1 (fin de página), el offset es 0 (línea totalmente dibujada)
-//     path1.style.strokeDashoffset = pathLength - (percentage * pathLength);
-//     path2.style.strokeDashoffset = pathLength - (percentage * pathLength);
+    
+//     let progreso = (windowHeight - rect.top) / (rect.height + windowHeight);
+
+//     progreso = Math.max(0, Math.min(1, progreso));
+
+  
+//     path1.style.strokeDashoffset = pathLength1 - (progreso * pathLength1);
+//     path2.style.strokeDashoffset = pathLength2 - (progreso * pathLength2);
 // }
 
-// // 6. Escuchamos el evento de scroll y carga de página
 // window.addEventListener('scroll', scrollAnimation);
-// scrollAnimation(); // Ejecutar una vez al cargar
+
+// window.addEventListener('load', scrollAnimation); 
+// scrollAnimation();
 
 
 
- const path1 = document.querySelector('#camino1');
+const path1 = document.querySelector('#camino1');
 const path2 = document.querySelector('#camino2');
-const svg = document.querySelector('.squiggle');
-const contenedor = document.querySelector('.contenedor-degradado'); // Importante
+const contenedor = document.querySelector('.contenedor-degradado');
 
-const pathLength1 = path1.getTotalLength();
+const pathLength1 = path1.getTotalLength();    
 const pathLength2 = path2.getTotalLength();
 
+// Configuración inicial
 path1.style.strokeDasharray = `${pathLength1} ${pathLength1}`;
 path2.style.strokeDasharray = `${pathLength2} ${pathLength2}`;
-
 path1.style.strokeDashoffset = pathLength1;
 path2.style.strokeDashoffset = pathLength2;
 
 function scrollAnimation() {
-  
     const rect = contenedor.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
     
-    let progreso = (windowHeight - rect.top) / (rect.height + windowHeight);
+    // Distancia desde el tope del contenedor al tope de la pantalla
+    // Negativo significa que el contenedor está arriba de la pantalla
+    const distanciaRecorrida = -rect.top;
+    
+    // La altura total del contenedor es lo que scrollearemos
+    const containerHeight = rect.height;
+    
+    // Progreso: 0 en el inicio del contenedor, 1 en el final
+    let progreso = distanciaRecorrida / containerHeight;
 
+    // Forzamos que el progreso sea exacto entre 0 y 1
     progreso = Math.max(0, Math.min(1, progreso));
 
-  
+    // Aplicamos el dibujo
     path1.style.strokeDashoffset = pathLength1 - (progreso * pathLength1);
     path2.style.strokeDashoffset = pathLength2 - (progreso * pathLength2);
 }
 
+// Escuchamos scroll y resize (por si cambia el tamaño de la ventana)
 window.addEventListener('scroll', scrollAnimation);
-
+window.addEventListener('resize', scrollAnimation);
 window.addEventListener('load', scrollAnimation); 
+
+// Ejecución inmediata
 scrollAnimation();
 
 

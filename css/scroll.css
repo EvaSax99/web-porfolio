@@ -1,7 +1,8 @@
 .contenedor-degradado {
     position: relative;
     width: 100%;
-    min-height: 4000px; /* O el alto que necesites */
+    height: auto;
+    overflow: hidden;
 }
 
 .squiggle {
@@ -10,22 +11,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    margin: 20px;
-    padding: 0 20px;
-    z-index: 0;
+    margin: 0;
+    margin-left: 20px;
+    color: linear-gradient(90deg, #fabc74, #ea7d00);
+    padding: 0;
+    z-index: 50;
     pointer-events: none; 
     display: block;
-    transition: height 0.1s ease-out;
+     /* transition: height 0.1s ease-out;
+    transform: translateY(-80px);  */
 }
 
 
 #camino1 {
     stroke-linecap: round;
     stroke-linejoin: round;
-    transition: stroke-dashoffset 0.1s linear; 
+    transition: stroke-dashoffset 0.05s linear; 
 }
 #camino2 {
     stroke-linecap: round;
     stroke-linejoin: round;
-    transition: stroke-dashoffset 0.1s linear; 
+    transition: stroke-dashoffset 0.05s linear; 
 }

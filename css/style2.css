@@ -1,0 +1,84 @@
+:root {
+    --bg: #f0f0f0;
+    --text: #0a0a0a;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    margin: 0;
+    cursor: none; /* Escondemos el cursor real */
+}
+
+#custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: var(--text);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference; /* Efecto que cambia de color según el fondo */
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-title h1 {
+    font-size: 12vw;
+    line-height: 0.85;
+    margin: 0;
+    font-weight: 800;
+}
+
+.hero-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.circle-media {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.circle-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-item {
+    border-bottom: 1px solid #ccc;
+    padding: 40px 5%;
+    transition: all 0.4s ease;
+}
+
+.service-item h2 {
+    font-size: 8vw;
+    margin: 0;
+}
+
+.model-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: transparent;
+}
+
+model-viewer {
+    width: 40vw; /* Tamaño inicial pequeño */
+    height: 40vw;
+    transition: transform 0.1s ease-out;
+}
