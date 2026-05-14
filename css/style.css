@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Koulen", sans-serif;
+  font-family: "Akt", sans-serif;
   color: rgb(34, 32, 32);
   background: #EBEBEB;
   cursor: none;
@@ -23,6 +23,19 @@ header {
   position: relative;
 }
 
+
+.header-eva {
+  background-color: #EBEBEB;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+}
+.header-eva:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
 .logo {
   width: 300px;
   height: 50px;
@@ -34,7 +47,7 @@ header {
   cursor: pointer;
   transform: 0.2s ease;
   z-index: 5000;
-
+  margin-bottom: 20px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,6 +60,8 @@ header {
   position: relative;
   top: 10px;
   z-index: 5000;
+  background-color:#EBEBEB ;
+
 }
 
 .hamburguesa {
@@ -119,8 +134,7 @@ header {
   width: min(1100px, 100%);
   width: 100%;
   gap: 50px;
-  margin-top: 80px;
-  margin: 40px auto 0;
+  margin: 250px auto 0;
   padding: 0 20px;
   align-items: center;
   flex-wrap: wrap;
@@ -133,7 +147,7 @@ header {
   
 }
 .hero-image:hover {
-  border: 3px solid rgb(34, 32, 32);
+  
   border-radius: 8px;
 }
 
@@ -197,10 +211,11 @@ header {
     #000000 10%,
     #000000 100%
   ); */
+  margin-top: 100px;
 
   display: block;
   color: #888;
-  padding: 20px 0;
+  padding: 50px 0;
 }
 .contenedor-columnas {
   max-width: 98vw;
@@ -255,7 +270,7 @@ header {
   font-size: 20px;
   color: rgb(34, 32, 32);
   transition: color 0.3s ease;
-  font-family: koulen;
+  font-family: akt;
   font-weight: 500;
   line-height: 1.5;
   /* display: inline-block; */
@@ -416,7 +431,7 @@ hr {
 }
 .footer-name {
   font-size: 15rem;
-  font-family: koulen;
+  font-family: jaro;
   padding: 0 auto;
   transform: translateY(100%);
   opacity: 0;
