@@ -10,6 +10,8 @@ body {
   background: #EBEBEB;
   cursor: none;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -31,6 +33,7 @@ header {
   text-decoration: none;
   cursor: pointer;
   transform: 0.2s ease;
+  z-index: 5000;
 
   background-size: contain;
   background-repeat: no-repeat;
@@ -43,6 +46,7 @@ header {
 .header-nav {
   position: relative;
   top: 10px;
+  z-index: 5000;
 }
 
 .hamburguesa {
@@ -277,8 +281,29 @@ header {
   
 }
 
+
+.squiggle { /* El ID o clase que envuelva tu SVG */
+    
+    /* DEBE ser mayor que el z-index de tus columnas (1000) */
+    z-index: 9999;  /* Para que puedas seleccionar texto y clicar links */
+    mix-blend-mode: difference;
+    pointer-events: none; /* No intercepta eventos del mouse */
+}
+
+#camino1, #camino2 {
+    stroke: #ffffff; /* Blanco para invertir colores */
+    pointer-events: none; /* No intercepta eventos del mouse */
+}
+
 .columna-p:hover {
   font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .columna-p {
+    width: 50%;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -294,6 +319,19 @@ header {
   }
 }
 
+@media (max-width: 480px) {
+  .columna-p {
+    width: 100%;
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .fila {
+    height: auto;
+    padding: 20px 10px;
+  }
+}
+
 
 .cursor-custom {
   width: 25px;
@@ -302,10 +340,15 @@ header {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 10001;
   mix-blend-mode: difference;
   transition: transform 0.05s ease-out;
   transform: translate(-50%, -50%);
+  will-change: transform;
+  display: block !important;
+  left: 0;
+  top: 0;
+  opacity: 1;
 }
 
 /* .contenedor-glb {
@@ -375,6 +418,14 @@ hr {
   font-size: 15rem;
   font-family: koulen;
   padding: 0 auto;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 3s , opacity 2s;
+}
+
+.footer-name.active {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .brand-info h3 {
@@ -421,6 +472,24 @@ hr {
   color: #fff;
 }
 
+
+/* .footer-name {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.footer-name.active {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+@media (max-width: 1024px) {
+  .footer-name {
+    font-size: 10rem;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
@@ -440,5 +509,22 @@ hr {
   }
   .squiggle {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 40px 5%;
+  }
+
+
+  .footer-top h2 {
+    font-size: 1.2rem;
+    
+  }
+
+  .footer-name {
+    font-size: 4rem;
+    margin: 20px;
   }
 }

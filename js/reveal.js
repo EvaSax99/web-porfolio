@@ -23,3 +23,19 @@
  document.querySelectorAll('.columna-p').forEach(columna => {
      revealObserver.observe(columna);
  });
+
+ // Para el footer-logo
+ const footerObserver = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+         const text = entry.target.querySelector('.footer-name');
+         if (entry.isIntersecting) {
+             if (text) text.classList.add('active');
+         } else {
+             if (text) text.classList.remove('active');
+         }
+     });
+ }, observerOptions);
+
+ document.querySelectorAll('.footer-logo').forEach(logo => {
+     footerObserver.observe(logo);
+ });

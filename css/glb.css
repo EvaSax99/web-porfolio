@@ -185,12 +185,14 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 /* Contenedor del GLB Parallax */
-.contenedor-glb {
-  width: 100%;
-  height: 150vh; /* Espacio para scrollear el efecto */
+.contenedor-glb { /* Espacio para scrollear el efecto */
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 250vh; /* Aumenta esto si quieres que el zoom sea más lento */
+  position: relative;
+  
 }
 
 .objeto-fijo {
@@ -201,10 +203,13 @@ model-viewer > #ar-prompt > img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  z-index: 5;
 }
 
 model-viewer {
-  width: 80vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
+  outline: none;
   --poster-color: transparent;
 }
