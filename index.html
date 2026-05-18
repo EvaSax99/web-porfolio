@@ -16,11 +16,13 @@
     <link rel="icon" type="image/img" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/scroll.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/glb.css" />
     <link rel="stylesheet" href="css/loader.css" />
     <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/formulario.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -189,68 +191,69 @@
     </div>
 
     <div class="contenedor-glb">
-        <div class="objetoGlb">
-          <model-viewer
-            id="miModelo"
-            src="Astronaut.glb"
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            camera-controls
-            tone-mapping="neutral"
-            poster="poster.webp"
-            shadow-intensity="1"
-            camera-orbit="-360.3deg 91.39deg 4.288m"
-            field-of-view="30deg"
-            disable-zoom
-            interpolation-decay="200"
+      <div class="objetoGlb">
+        <model-viewer
+          id="miModelo"
+          src="Astronaut.glb"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          tone-mapping="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+          camera-orbit="-360.3deg 91.39deg 4.288m"
+          field-of-view="30deg"
+          disable-zoom
+          interpolation-decay="200"
+        >
+          <button
+            class="Hotspot"
+            slot="hotspot-1"
+            data-position="0.004943376496202634m 1.7435551795506283m 0.3499383491535166m"
+            data-normal="0.2586151003950921m -0.19952579310771987m 0.9451495583939994m"
+            data-visibility-attribute="visible"
           >
-            <button
-              class="Hotspot"
-              slot="hotspot-1"
-              data-position="0.004943376496202634m 1.7435551795506283m 0.3499383491535166m"
-              data-normal="0.2586151003950921m -0.19952579310771987m 0.9451495583939994m"
-              data-visibility-attribute="visible"
-            >
-              <div class="HotspotAnnotation">item 1</div></button
-            ><button
-              class="Hotspot"
-              slot="hotspot-2"
-              data-position="0.5268783248943438m 0.915153755047833m 0.11169006269187065m"
-              data-normal="0.7503211590804437m -0.023259230378881505m 0.6606641858299583m"
-              data-visibility-attribute="visible"
-            >
-              <div class="HotspotAnnotation">item 2</div></button
-            ><button
-              class="Hotspot"
-              slot="hotspot-3"
-              data-position="0.002522889103573789m 1.703820370880117m -0.34841200709342957m"
-              data-normal="0m 0m -1m"
-              data-visibility-attribute="visible"
-            >
-              <div class="HotspotAnnotation">item 3</div>
-            </button>
-            <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
-            </div>
-            <button slot="ar-button" id="ar-button">View in your space</button>
-            <div id="ar-prompt">
-              <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
-            </div>
-          </model-viewer>
-        </div>
+            <div class="HotspotAnnotation">item 1</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-2"
+            data-position="0.5268783248943438m 0.915153755047833m 0.11169006269187065m"
+            data-normal="0.7503211590804437m -0.023259230378881505m 0.6606641858299583m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">item 2</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-3"
+            data-position="0.002522889103573789m 1.703820370880117m -0.34841200709342957m"
+            data-normal="0m 0m -1m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">item 3</div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">View in your space</button>
+          <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+          </div>
+        </model-viewer>
       </div>
+    </div>
 
-    <section>
-      <div id="carouselExample" class="carousel slide">
+    <section class="carousel-container">
+      <h1>Imágenes de mis proyectos</h1>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="..." />
+            <img src="img/filtro5.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
+            <img src="img/filtro6.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
+            <img src="img/filtro7.jpg" class="d-block w-100" alt="..." />
           </div>
         </div>
         <button
@@ -274,14 +277,97 @@
       </div>
     </section>
 
+    <div class="container text-center galeria">
+      <h1>Sneak-peak de mis proyectos</h1>
+      <p>
+        Estas son algunas imágenes de mis proyectos recientes en modelado 3D y diseñi web.
+      </p>
+      <div class="row">
+        <div class="col-sm-8 paisaje paisaje1">
+          <a href="">
+            <div class="caja-txt">
+              Don’t want your columns to simply stack in some grid tiers? Use a
+              combination of different classes for each tier as needed.
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4 paisaje paisaje2">
+          <a href="">
+            <div class="caja-txt">
+              Don’t want your columns to simply stack in some grid tiers? Use a
+              combination of different classes for each tier as needed.
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm paisaje paisaje3">
+          <a href="">
+            <div class="caja-txt">
+              Don’t want your columns to simply stack in some grid tiers? Use a
+              combination of different classes for each tier as needed.
+            </div>
+          </a>
+        </div>
+        <div class="col-sm paisaje paisaje4">
+          <a href="">
+            <div class="caja-txt">
+              Don’t want your columns to simply stack in some grid tiers? Use a
+              combination of different classes for each tier as needed.
+            </div>
+          </a>
+        </div>
+        <div class="col-sm paisaje paisaje5">
+          <a href="">
+            <div class="caja-txt">
+              Don’t want your columns to simply stack in some grid tiers? Use a
+              combination of different classes for each tier as needed.
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-container">
+      <button id="openForm" class="cta-button">Contacto</button>
+      <div class="contact-text">
+        <h2>Contactad conmigo</h2>
+        <p>
+          ¿Tienes un proyecto en mente? ¡Contáctame y hagamos algo increíble
+          juntos!
+        </p>
+      </div>
+
+      <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Cuéntame tu proyecto</h2>
+          <form id="contactForm">
+            <input type="text" placeholder="Nombre" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+            <button type="submit" class="cta-button">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="footer-top">
         <h2>Let's work together</h2>
         <div class="social-icons-top">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="far fa-envelope"></i></a>
+          <a href="#"><i class="fab fa-instagram">
+            
+          </i></a>
+          <a href="#"><i class="fab fa-linkedin">
+            
+          </i></a>
+          <a href="#"><i class="fab fa-twitter">
+            
+          </i></a>
+          <a href="#"><i class="far fa-envelope">
+            
+          </i></a>
         </div>
       </div>
 
@@ -289,12 +375,18 @@
 
       <div class="footer-bottom">
         <div class="brand-info">
-          <h3>Namedly</h3>
-          <p>Descriptive line about what your company does.</p>
+          <h3>EvaClement</h3>
+          <p>Front-end developer and designer</p>
           <div class="social-icons-bottom">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#">
+              <img src="icons/instagram-24.png" alt="">
+            </i></a>
+            <a href="#">
+              <img src="icons/linkedin-24.png" alt="">
+            </i></a>
+            <a href="#">
+              <img src="icons/twitter-24.png" alt="">
+            </i></a>
           </div>
         </div>
 
@@ -334,6 +426,7 @@
     <script src="js/scroll.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/reveal.js"></script>
+    <script src="js/formulario.js"></script>
     <script src="js/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

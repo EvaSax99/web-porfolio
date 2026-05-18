@@ -190,9 +190,8 @@ model-viewer > #ar-prompt > img {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 250vh; /* Aumenta esto si quieres que el zoom sea más lento */
+  height: 150vh; /* Reducido para acercar el siguiente bloque */
   position: relative;
-  
 }
 
 .objeto-fijo {

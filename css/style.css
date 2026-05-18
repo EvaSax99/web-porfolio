@@ -7,7 +7,7 @@
 body {
   font-family: "Akt", sans-serif;
   color: rgb(34, 32, 32);
-  background: #EBEBEB;
+  background: #ebebeb;
   cursor: none;
   overflow-x: hidden;
   margin: 0;
@@ -23,15 +23,13 @@ header {
   position: relative;
 }
 
-
 .header-eva {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  
 }
 .header-eva:hover {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -60,8 +58,7 @@ header {
   position: relative;
   top: 10px;
   z-index: 5000;
-  background-color:#EBEBEB ;
-
+  background-color: #ebebeb;
 }
 
 .hamburguesa {
@@ -144,10 +141,8 @@ header {
 .hero-image {
   flex: 1;
   min-width: 300px;
-  
 }
 .hero-image:hover {
-  
   border-radius: 8px;
 }
 
@@ -222,28 +217,29 @@ header {
   margin: 0 auto;
   padding: 0 20px;
   margin-top: 100vh;
-  
+
   position: relative;
-  z-index: 1000; 
-  
+  z-index: 1000;
 }
 
 .reveal-wrapper {
-    overflow: hidden; 
-    vertical-align: bottom;
+  overflow: hidden;
+  vertical-align: bottom;
 }
 
 .reveal-text {
-    transform: translateY(100%); 
-    opacity: 0; 
-    transition: transform 2s cubic-bezier(0.77, 0, 0.175, 1), opacity 2s;
-    transform:color 0.2s ease;
+  transform: translateY(100%);
+  opacity: 0;
+  transition:
+    transform 2s cubic-bezier(0.77, 0, 0.175, 1),
+    opacity 2s;
+  transform: color 0.2s ease;
 }
 
 .reveal-text.active {
-    transform: translateY(0%);
-    opacity: 1;
-    color: rgb(34, 32, 32)
+  transform: translateY(0%);
+  opacity: 1;
+  color: rgb(34, 32, 32);
 }
 
 /* .contenedor-espaciador {
@@ -274,40 +270,39 @@ header {
   font-weight: 500;
   line-height: 1.5;
   /* display: inline-block; */
-  z-index:100;
+  z-index: 100;
 }
 
 #columna1 {
   margin-top: 0px;
-  color: #EBEBEB;
-  
+  color: #ebebeb;
 }
 #columna2 {
-  margin-top:0px;
-  color: #EBEBEB;
+  margin-top: 0px;
+  color: #ebebeb;
 }
 #columna3 {
-  margin-top:0px;
-  color:#EBEBEB
+  margin-top: 0px;
+  color: #ebebeb;
 }
 #columna4 {
   margin-top: 0px;
-  color:#EBEBEB;
-  
+  color: #ebebeb;
 }
 
+.squiggle {
+  /* El ID o clase que envuelva tu SVG */
 
-.squiggle { /* El ID o clase que envuelva tu SVG */
-    
-    /* DEBE ser mayor que el z-index de tus columnas (1000) */
-    z-index: 9999;  /* Para que puedas seleccionar texto y clicar links */
-    mix-blend-mode: difference;
-    pointer-events: none; /* No intercepta eventos del mouse */
+  /* DEBE ser mayor que el z-index de tus columnas (1000) */
+  z-index: 9999; /* Para que puedas seleccionar texto y clicar links */
+  mix-blend-mode: difference;
+  pointer-events: none; /* No intercepta eventos del mouse */
 }
 
-#camino1, #camino2 {
-    stroke: #ffffff; /* Blanco para invertir colores */
-    pointer-events: none; /* No intercepta eventos del mouse */
+#camino1,
+#camino2 {
+  stroke: #ffffff; /* Blanco para invertir colores */
+  pointer-events: none; /* No intercepta eventos del mouse */
 }
 
 .columna-p:hover {
@@ -347,7 +342,6 @@ header {
   }
 }
 
-
 .cursor-custom {
   width: 25px;
   height: 25px;
@@ -375,6 +369,118 @@ header {
   margin-bottom: 30px;
   margin-top: 6000px;
 } */
+
+.carousel-container {
+  width: 70vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px auto 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container img,
+.carousel-container video,
+.carousel-container .slide {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 10px;
+    gap: 6px;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.galeria {
+  margin-top: 80px;
+  color: rgb(34, 32, 32);
+  width: 85vw;
+  height: auto;
+}
+.galeria h1 {
+  font-size: 48px;
+  font-style: bold;
+  font-family: akt, sans-serif;
+}
+
+.paisaje {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  gap: 10px;
+  border: 5px solid #ebebeb;
+}
+
+.paisaje:hover {
+  cursor: pointer;
+  border: 10px solid #ebebeb;
+}
+.paisaje:hover .caja-txt {
+  background-color: #d8dbd4;
+  height: 100px;
+  opacity: 80%;
+}
+.caja-txt {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 0px;
+  transition: height 0.5s;
+  color: rgb(34, 32, 32);
+  opacity: 0;
+  font-family: akt;
+}
+
+.paisaje1 {
+  background-image: url(../img/render3.jpg);
+}
+
+.paisaje2 {
+  background-image: url(../img/filtro6.jpg);
+}
+
+.paisaje3 {
+  background-image: url(../img/filtro7.jpg);
+}
+
+.paisaje4 {
+  background-image: url(../img/render1.jpg);
+}
+
+.paisaje5 {
+  background-image: url(../img/filtro5.jpg);
+}
+
+.paisaje6 {
+  background-image: url(../img/render3.jpg);
+}
 
 a {
   color: #007bff;
@@ -427,15 +533,25 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0 10px;
+  background-color: rgb(34, 32, 32);
 }
 .footer-name {
   font-size: 15rem;
   font-family: jaro;
-  padding: 0 auto;
-  transform: translateY(100%);
+  margin: 0;
+  display: inline-block;
+  line-height: 1;
+  color: #fff;
+  background-color: rgb(34, 32, 32);
+  transform: translateY(110%);
   opacity: 0;
-  transition: transform 3s , opacity 2s;
+  transition:
+    transform 1.6s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 1.2s ease-out;
+  will-change: transform, opacity;
 }
 
 .footer-name.active {
@@ -487,7 +603,6 @@ hr {
   color: #fff;
 }
 
-
 /* .footer-name {
     opacity: 0;
     transform: translateY(20px);
@@ -521,6 +636,12 @@ hr {
   .footer-logo {
     justify-content: center;
     gap: 20px;
+    padding: 16px 0 8px;
+  }
+  .footer-name {
+    font-size: 5.5rem;
+    margin: 0;
+    padding: 0 10px;
   }
   .squiggle {
     display: none;
@@ -529,17 +650,16 @@ hr {
 
 @media (max-width: 480px) {
   footer {
-    padding: 40px 5%;
+    padding: 20px 5%;
   }
-
 
   .footer-top h2 {
     font-size: 1.2rem;
-    
   }
 
   .footer-name {
-    font-size: 4rem;
-    margin: 20px;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 8px;
   }
 }
