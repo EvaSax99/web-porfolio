@@ -21,6 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 80px;
 }
 
 .header-eva {
@@ -56,19 +57,20 @@ header {
 
 .header-nav {
   position: relative;
+  height: 60px;
   top: 10px;
-  z-index: 5000;
+  z-index: 1000;
   background-color: #ebebeb;
 }
 
 .hamburguesa {
   display: none;
   cursor: pointer;
-  font-size: 36px;
   color: rgb(34, 32, 32);
 }
 
 .nav-links {
+  height: 50px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -460,11 +462,29 @@ header {
 
 .paisaje1 {
   background-image: url(../img/render3.jpg);
+  height: 420px;
+}
+
+@media (max-width: 1024px) {
+  .paisaje1 { height: 360px; }
+  .paisaje2 { height: 360px; }
+}
+
+@media (max-width: 768px) {
+  .paisaje1 { height: 300px; }
+  .paisaje2 { height: 300px; }
+}
+
+@media (max-width: 480px) {
+  .paisaje1 { height: 220px; }
+  .paisaje2 { height: 220px; }
 }
 
 .paisaje2 {
   background-image: url(../img/filtro6.jpg);
+  height: 420px;
 }
+
 
 .paisaje3 {
   background-image: url(../img/filtro7.jpg);
@@ -479,7 +499,15 @@ header {
 }
 
 .paisaje6 {
-  background-image: url(../img/render3.jpg);
+  background-image: url('img/render4.jpg');
+}
+
+.paisaje7 {
+  background-image: url('img/render2.jpg');
+}
+
+.paisaje8 {
+  background-image: url('img/filtro6.jpg');
 }
 
 a {
