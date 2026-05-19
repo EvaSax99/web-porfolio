@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/glb.css" />
     <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/style-contact.css" />
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/formulario.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,29 +47,9 @@
       href="https://fonts.googleapis.com/css2?family=Akt:wght@100..900&family=Inconsolata:wght@200..900&family=Jaro:opsz@6..72&family=Koulen&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Astronaut.glb" />
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
   </head>
 
   <body>
-    <div id="custom-loader-container">
-      <div class="loader-stats">
-        <span>*</span>
-        <div class="loader-img-box">
-          <span>(</span>
-          <img src="img/icon.png" alt="loading" />
-          <span>)</span>
-        </div>
-        <span id="percentage">0%</span>
-      </div>
-    </div>
-
-    <main id="main-content">
-      <h1 class="reveal-text">THE ART OF HACKING</h1>
-    </main>
     <div class="cursor-custom" id="cursor"></div>
     <header class="header-eva">
       <a href="about:blank" target="_blank" class="logo">Eva Clement</a>
@@ -82,21 +63,10 @@
         </div>
       </nav>
     </header>
-    <section class="hero-container">
-      <div class="hero-content">
-        <h1>A really compelling headline</h1>
-        <p>
-          Call out a feature, benefit, or value of your site, then link to a
-          page where people can learn more about it.
-        </p>
-        <a href="#" class="cta-button">Call to action</a>
-      </div>
-      <div class="hero-image">
-        <img src="img/filtro6.jpg" alt="3D Model Representation" />
-      </div>
-    </section>
 
-    <div class="contenedor-degradado">
+    <body>
+
+      <div class="contenedor-degradado">
       <div class="contenedor-espaciador"></div>
 
       <svg
@@ -134,14 +104,7 @@
         <div class="fila">
           <div class="columna-p" id="columna1">
             <div class="reveal-wrapper" id="section-scroll">
-              <p class="reveal-text" id="p">
-                Me encanta esa sensación de ver cómo un diseño de Figma se
-                convierte en una web real que funciona perfecto. No solo tiro
-                líneas de código; me aseguro de que el HTML y el CSS estén tan
-                limpios por dentro como se ven por fuera. Para mí, que una web
-                sea responsive no es un extra, es el estándar: si no se ve bien
-                en el móvil mientras tomas un café, no está terminada.
-              </p>
+              <img class="reveal-img" id="i" src="img/filtro6.jpg" alt="">
             </div>
           </div>
         </div>
@@ -149,14 +112,7 @@
         <div class="fila">
           <div class="columna-p" id="columna2">
             <div class="reveal-wrapper" id="section-scroll">
-              <p class="reveal-text" id="p">
-                No me conformo con webs estáticas. Me gusta usar JavaScript para
-                que el usuario sienta que la página responde a lo que hace. Ya
-                sea un menú que aparece suavemente o una validación que te ayuda
-                a no equivocarte, mi meta es que la interactividad sume y no
-                estorbe. Disfruto buscando soluciones lógicas a problemas que
-                parecen un puzle.
-              </p>
+              <img class="reveal-img" id="i" src="img/filtro7.jpg" alt="">
             </div>
           </div>
         </div>
@@ -164,14 +120,7 @@
         <div class="fila">
           <div class="columna-p" id="columna3">
             <div class="reveal-wrapper" id="section-scroll">
-              <p class="reveal-text" id="p">
-                Siempre que diseño algo, me pregunto: "¿Esto se entiende a la
-                primera?". Me obsesiona un poco la usabilidad. Creo que el mejor
-                diseño es el que no necesita explicación. Intento que cada
-                espacio y cada botón guíen al usuario de forma natural, porque
-                al final del día, una web bonita que nadie sabe usar no sirve de
-                mucho.
-              </p>
+              <img class="reveal-img" id="i" src="img/filtro5.jpg" alt="">
             </div>
           </div>
         </div>
@@ -179,151 +128,80 @@
         <div class="fila">
           <div class="columna-p" id="columna4">
             <div class="reveal-wrapper" id="section-scroll">
-              <p class="reveal-text" id="p">
-                Sé lo que es que un proyecto se complique si no hay orden, por
-                eso me llevo muy bien con Git y GitHub. Me gusta trabajar de
-                forma organizada para que mis compañeras (y mi "yo" del futuro)
-                entiendan qué he hecho. Creo que la comunicación es tan
-                importante como el código, y siempre estoy lista para aprender
-                algo nuevo o echar una mano en lo que haga falta.
-              </p>
+              <img class="reveal-img" id="i" src="img/filtro8.jpg" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="contenedor-glb">
-      <div class="objetoGlb">
-        <model-viewer
-          id="miModelo"
-          src="Astronaut.glb"
-          ar
-          ar-modes="scene-viewer webxr quick-look"
-          camera-controls
-          tone-mapping="neutral"
-          poster="poster.webp"
-          shadow-intensity="1"
-          camera-orbit="-360.3deg 91.39deg 4.288m"
-          field-of-view="30deg"
-          disable-zoom
-          interpolation-decay="200"
-        >
-          <button
-            class="Hotspot"
-            slot="hotspot-1"
-            data-position="0.004943376496202634m 1.7435551795506283m 0.3499383491535166m"
-            data-normal="0.2586151003950921m -0.19952579310771987m 0.9451495583939994m"
-            data-visibility-attribute="visible"
-          >
-            <div class="HotspotAnnotation">item 1</div></button
-          ><button
-            class="Hotspot"
-            slot="hotspot-2"
-            data-position="0.5268783248943438m 0.915153755047833m 0.11169006269187065m"
-            data-normal="0.7503211590804437m -0.023259230378881505m 0.6606641858299583m"
-            data-visibility-attribute="visible"
-          >
-            <div class="HotspotAnnotation">item 2</div></button
-          ><button
-            class="Hotspot"
-            slot="hotspot-3"
-            data-position="0.002522889103573789m 1.703820370880117m -0.34841200709342957m"
-            data-normal="0m 0m -1m"
-            data-visibility-attribute="visible"
-          >
-            <div class="HotspotAnnotation">item 3</div>
-          </button>
-          <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-          </div>
-          <button slot="ar-button" id="ar-button">View in your space</button>
-          <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
-          </div>
-        </model-viewer>
-      </div>
-    </div>
+    
 
-    <div class="inform-container">
-      <h1>No solo me especializo en diseño web, sino también en modelado 3D y entornos en Realidad Virtual.</h1>
-    </div>
-
-    <div class="container text-center galeria">
-      <h1>Sneak-peak de mis proyectos</h1>
-      <p>
-        Estas son algunas imágenes de mis proyectos recientes en modelado 3D y diseñi web.
+  <main class="contacto-container">
+    
+    <section class="contacto-info">
+      <h1 class="contacto-titulo">¡Hablemos!</h1>
+      <p class="contacto-descripcion">
+        ¿Tienes un proyecto en mente, una idea loca o simplemente quieres saludar? Escríbeme y me pondré en contacto contigo lo antes posible.
       </p>
-      <div class="row">
-        <div class="col-sm-8 paisaje paisaje1">
-          <a href="">
-            <div class="caja-txt">
-              Don’t want your columns to simply stack in some grid tiers? Use a
-              combination of different classes for each tier as needed.
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-4 paisaje paisaje2">
-          <a href="">
-            <div class="caja-txt">
-              Don’t want your columns to simply stack in some grid tiers? Use a
-              combination of different classes for each tier as needed.
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm paisaje paisaje3">
-          <a href="">
-            <div class="caja-txt">
-              Don’t want your columns to simply stack in some grid tiers? Use a
-              combination of different classes for each tier as needed.
-            </div>
-          </a>
-        </div>
-        <div class="col-sm paisaje paisaje4">
-          <a href="">
-            <div class="caja-txt">
-              Don’t want your columns to simply stack in some grid tiers? Use a
-              combination of different classes for each tier as needed.
-            </div>
-          </a>
-        </div>
-        <div class="col-sm paisaje paisaje5">
-          <a href="">
-            <div class="caja-txt">
-              Don’t want your columns to simply stack in some grid tiers? Use a
-              combination of different classes for each tier as needed.
-            </div>
-          </a>
-        </div>
-      </div>
-      </div>
-
       
-    <div class="contact-container">
-      <button id="openForm" class="cta-button">Contacto</button>
-      <div class="contact-text">
-        <h2>Contactad conmigo</h2>
-        <p>
-          ¿Tienes un proyecto en mente? ¡Contáctame y hagamos algo increíble
-          juntos!
-        </p>
+      <div class="contacto-img">
+        <img src="img/filtro6.jpg" alt="">
       </div>
 
-      <div id="contactModal" class="modal-overlay">
-        <div class="modal-content">
-          <span class="close-btn">&times;</span>
-          <h2>Cuéntame tu proyecto</h2>
-          <form id="contactForm">
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Email" required />
-            <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-            <button type="submit" class="cta-button">Enviar mensaje</button>
-          </form>
+      <div class="contacto-redes">
+        <div class="social-icons-top">
+          <a href="#"><i class="fab fa-instagram">
+            
+          </i></a>
+          <a href="#"><i class="fab fa-linkedin">
+            
+          </i></a>
+          <a href="#"><i class="fab fa-twitter">
+            
+          </i></a>
+          <a href="#"><i class="far fa-envelope">
+            
+          </i></a>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="contacto-formulario-wrapper">
+      <form action="#" method="POST" class="contacto-form">
+        
+        <div class="form-grupo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Fulanita Pérez" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ej. fulanita@correo.com" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="¿De qué trata tu proyecto?" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntame los detalles..." required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button btn-enviar">
+          Enviar mensaje
+        </button>
+
+      </form>
+    </section>
+
+  </main>
+
+</body>
+
+
 
     <footer>
       <div class="footer-top">
@@ -345,6 +223,8 @@
       </div>
 
       <hr />
+
+
 
       <div class="footer-bottom">
         <div class="brand-info">
@@ -417,6 +297,12 @@
           model,
           { scale: 0.5, opacity: 0.3, duration: 1 }, // Se encoge al salir
         );
+
+
+
+     
+    
     </script>
+
+
   </body>
-</html>
